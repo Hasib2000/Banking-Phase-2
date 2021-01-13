@@ -1,0 +1,51 @@
+package Mobile_Banking;
+
+
+
+public class Bank_info {
+    public String safin_pin="2345";
+    public String tarik_pin="";
+    public String tamim_pin="2453";
+    public String horizontal_line="-------------------------------------------------";
+
+    public void startBanking() {
+        Nagad_account anika = new Nagad_account("Safin Ahmed", "01712345678","6", safin_pin);
+        Bkash_account afrin = new Bkash_account("Tarik Islam", "01777888999");
+        Rocket_account tamim = new Rocket_account("Tamim Rahman", "01688996655", tamim_pin);
+
+      System.out.println("Nagad:");
+      anika.add_money(20000);
+
+      anika.cash_out_amount(20000);
+      anika.cash_out_pin(safin_pin);
+      anika.cash_out_amount(2000);
+      anika.cash_out_pin(safin_pin);
+      System.out.println(anika);
+      System.out.println(horizontal_line);
+
+      System.out.println("Bkash:");
+      afrin.add_money(40000);
+      afrin.add_money(5000);
+
+      afrin.cash_out_amount(2000);
+      tarik_pin= afrin.getPin_number();
+      afrin.cash_out_pin(tarik_pin);
+      System.out.println(afrin);
+      System.out.println(horizontal_line);
+
+      System.out.println("Rocket:");
+      tamim.add_money(10000);
+      tamim.cash_out_amount(40000);
+      tamim.cash_out_pin(tamim_pin);
+      tamim.cash_out_amount(5000);
+      tamim.cash_out_pin("6783");
+      tamim_pin=tamim.get_pin_updated("6783","3467");
+      tamim_pin=tamim.get_pin_updated(tamim_pin,"3767");
+
+      tamim.cash_out_amount(3000);
+      tamim.cash_out_pin(tamim_pin);
+      System.out.println(tamim);
+
+
+    }
+}
