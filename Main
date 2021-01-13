@@ -1,0 +1,9 @@
+package Mobile_Banking;
+
+
+public class Main_Class {
+    public static void main(String[] args) {
+        Bank_info start=new Bank_info();
+        start.startBanking();
+    }
+}
